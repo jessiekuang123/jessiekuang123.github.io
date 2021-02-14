@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+             background-image: url(https://i.pinimg.com/originals/2e/32/ad/2e32ad493f62d15e533fb3d1d14154ab.jpg);
+             background-repeat: no-repeat;
+             background-size:1300px 700px;
+         }
+ 
+         h2{
+             text-align: center;
+             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+             color:black;
+             background-color:lightskyblue;
+         }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Information Update</title>
+</head>
+
+<body>
+    <h2>Update Left Date Information</h2>
+    <form action="/leftdate/update" method="POST">
+    <div class="form-outline mb-4">
+    <label for="familyname">Please enter your family name:</label>
+    <input type="text" id="familyname" name="familyname"/> 
+    </div>
+    <div class="form-outline mb-4">
+    <label for="firstname">Please enter your first name:</label>
+    <input type="text" id="firstname" name="firstname"/> 
+    </div>
+    <div class="form-outline mb-4">
+    <label for="leftdate">Left Date:</label>
+    <input type="datetime" id="leftdate" name="leftdate"/>
+    </div>
+    <input type="submit"/>
+    <input type="reset"/>
+    </form>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}" class="navbar-brand">Home Page</a>
+    </div>
+</body>
+
+</html>

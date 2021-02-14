@@ -1,0 +1,45 @@
+.message {
+    font-weight: 600;
+    color: blue;
+}
+
+body{
+    background-image: url( https://lakecommunity.org/wp-content/uploads/2018/11/SG-night-18-logo-w-date-1024x576.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom:490px;
+    right: 300px;
+}
+
+
+.navbar {
+    background-color: lightslategray;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.navbar-item {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.body-content {
+    color:violet;
+    padding: 0.5px;
+    font-family:"Lucida Console", "Courier New", monospace;
+}
+

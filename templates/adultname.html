@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+             background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/337811a9-773f-424e-be07-9d0d2e5a23f9/d2843z7-00aa2853-dee4-4aa5-bc14-1a31c9ef3935.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzM3ODExYTktNzczZi00MjRlLWJlMDctOWQwZDJlNWEyM2Y5XC9kMjg0M3o3LTAwYWEyODUzLWRlZTQtNGFhNS1iYzE0LTFhMzFjOWVmMzkzNS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.FR1GY5o__FONwVA6knFX6i2uGdNpfqCZRqXQoEUccLY);
+             background-repeat: no-repeat;
+             background-size:1300px 700px;
+         }
+ 
+         h2{
+             text-align: center;
+             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+             color:black;
+             background-color:lightskyblue;
+         }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Please select your name to sign in</title>
+</head>
+
+<body>
+    <h2>Welcome to the Activity Night! Please select your name from the table below to sign in</h2>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+    {% for col in adultcols %}
+    <th>{{col}}</th>
+    {% endfor %}
+    </tr>
+    </thead>
+    {# this is a comment the line below prints the adult result #}
+    <tbody>
+    {% for result in adultresult %}
+    <tr>
+        <td><a href="/adultname?familyname={{result[0]}}">{{result[0]}}</a></td><td>{{result[1]}}</td><td>{{result[2]}}</td><td>{{result[3]}}</td><td>{{result[4]}}</td><td>{{result[5]}}</td><td>{{result[6]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}" class="navbar-brand">Home Page</a>
+    </div>
+</body>
+
+</html>
